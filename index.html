@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO: edit these to match your name / topic ===================== -->
+  <title>Dr. Jordan A. Researcher — Civil Engineering &amp; Structural Health Monitoring</title>
+  <meta name="description" content="Academic portfolio of a Civil Engineering researcher specialising in bridges, structural engineering and Structural Health Monitoring (SHM)." />
+  <meta name="author" content="Dr. Jordan A. Researcher" />
+  <meta name="keywords" content="Civil Engineering, Bridge Engineering, Structural Engineering, Structural Health Monitoring, SHM, Damage Detection, Infrastructure Monitoring" />
+  <!-- Open Graph (link previews on social / messaging) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dr. Jordan A. Researcher — Civil &amp; Structural Engineering" />
+  <meta property="og:description" content="Bridges · Structural Engineering · Structural Health Monitoring" />
+  <meta property="og:image" content="public/images/bridge-hero.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230f2438'/><path d='M2 11h12M8 3v8M8 3 3 11M8 3l5 8' stroke='%232f7cb8' stroke-width='1' fill='none'/></svg>" />
+
+  <!-- Fonts: Fraunces (headings) · IBM Plex Sans (body) · IBM Plex Mono (labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand" aria-label="Home">
+        <svg class="nav__mark" viewBox="0 0 40 28" aria-hidden="true">
+          <path d="M2 24h36M20 4v20M20 4 4 24M20 4l16 20M20 4 11 24M20 4l9 20"
+                fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span class="nav__name" id="nav-name">J. A. Researcher</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== 1 · HOME / HERO ===================== -->
+    <section id="home" class="hero">
+      <!-- Animated line-art cable-stayed bridge (shows even without a photo).
+           Add public/images/bridge-hero.jpg and the photo layer fades in. -->
+      <div class="hero__bg" id="hero-bg"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <svg class="hero__bridge" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <g class="bridge-cables" fill="none" stroke="var(--steel-bright)" stroke-width="1.2" opacity=".55">
+          <!-- cables filled by main.js for a clean staggered draw-in -->
+        </g>
+        <line class="bridge-deck" x1="0" y1="430" x2="1440" y2="430"/>
+        <line class="bridge-tower" x1="470" y1="120" x2="470" y2="430"/>
+        <line class="bridge-tower" x1="980" y1="120" x2="980" y2="430"/>
+        <line class="bridge-deck-lower" x1="0" y1="440" x2="1440" y2="440"/>
+      </svg>
+
+      <div class="hero__content">
+        <p class="hero__kicker" id="hero-kicker">Civil &amp; Structural Engineering</p>
+        <h1 class="hero__name" id="hero-name">—</h1>
+        <p class="hero__role" id="hero-role">—</p>
+        <p class="hero__intro" id="hero-intro">—</p>
+        <div class="hero__actions">
+          <a href="#research" class="btn btn--primary">Research</a>
+          <a href="#projects" class="btn">Projects</a>
+          <a href="#publications" class="btn">Publications</a>
+          <a href="#cv" class="btn btn--ghost">Curriculum Vitae</a>
+        </div>
+        <p class="hero__meta" id="hero-meta">—</p>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to content"><span></span></a>
+    </section>
+
+    <!-- ===================== 2 · ABOUT ===================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">§ 01 — Profile</span>
+          <h2 class="section__title">About Me</h2>
+        </div>
+        <div class="about">
+          <div class="about__photo">
+            <img id="about-photo" alt="Portrait" loading="lazy"
+                 onerror="this.classList.add('img--missing')"/>
+            <div class="about__photo-frame" aria-hidden="true"></div>
+          </div>
+          <div class="about__text" id="about-text"><!-- filled by render.js --></div>
+        </div>
+        <div class="about__highlights" id="about-highlights"><!-- filled --></div>
+      </div>
+    </section>
+
+    <!-- ===================== 3 · RESEARCH ===================== -->
+    <section id="research" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">§ 02 — Focus areas</span>
+          <h2 class="section__title">Research Interests</h2>
+          <p class="section__lede">Where structural mechanics meets sensing and data.</p>
+        </div>
+        <div class="research-grid" id="research-grid"><!-- filled --></div>
+      </div>
+    </section>
+
+    <!-- ===================== 4 · PROJECTS ===================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">§ 03 — Current work</span>
+          <h2 class="section__title">Current Projects</h2>
+        </div>
+        <div class="projects" id="projects-list"><!-- filled --></div>
+      </div>
+    </section>
+
+    <!-- ===================== 5 · PUBLICATIONS ===================== -->
+    <section id="publications" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">§ 04 — Outputs</span>
+          <h2 class="section__title">Publications</h2>
+          <p class="section__lede">Selected journal &amp; conference papers, reports and talks.</p>
+        </div>
+        <div class="pub-filters" id="pub-filters"><!-- filled --></div>
+        <div class="publications" id="publications-list"><!-- filled --></div>
+      </div>
+    </section>
+
+    <!-- ===================== 6 · CURRICULUM VITAE ===================== -->
+    <section id="cv" class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">§ 05 — Career</span>
+          <h2 class="section__title">Curriculum Vitae</h2>
+          <a id="cv-download" class="btn btn--primary cv-download" href="#" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download CV (PDF)
+          </a>
+        </div>
+        <div class="cv" id="cv-content"><!-- filled --></div>
+      </div>
+    </section>
+
+    <!-- ===================== 7 · CERTIFICATES ===================== -->
+    <section id="certificates" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">§ 06 — Credentials</span>
+          <h2 class="section__title">Certificates &amp; Training</h2>
+        </div>
+        <div class="cert-grid" id="cert-grid"><!-- filled --></div>
+      </div>
+    </section>
+
+    <!-- ===================== 8 · MEDIA GALLERY ===================== -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">§ 07 — Visual record</span>
+          <h2 class="section__title">Media Gallery</h2>
+          <p class="section__lede">Bridges, laboratory work, field measurements, sensors and conferences.</p>
+        </div>
+        <div class="gallery" id="gallery-grid"><!-- filled --></div>
+      </div>
+    </section>
+
+    <!-- ===================== 9 · CONTACT ===================== -->
+    <section id="contact" class="section section--contact">
+      <div class="container">
+        <div class="section__head">
+          <span class="kicker">§ 08 — Get in touch</span>
+          <h2 class="section__title">Contact</h2>
+          <p class="section__lede" id="contact-intro">—</p>
+        </div>
+        <div class="contact">
+          <div class="contact__links" id="contact-links"><!-- filled --></div>
+          <div class="contact__form-wrap" id="contact-form-wrap"><!-- filled --></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <svg class="footer__mark" viewBox="0 0 40 28" aria-hidden="true">
+        <path d="M2 24h36M20 4v20M20 4 4 24M20 4l16 20" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      <p id="footer-note">—</p>
+      <a href="#home" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ===================== LIGHTBOX (gallery) ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Media viewer">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+    <div class="lightbox__stage" id="lightbox-stage"></div>
+    <button class="lightbox__nav lightbox__next" id="lightbox-next" aria-label="Next">&#8250;</button>
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+  </div>
+
+  <!-- Scripts loaded as plain globals (no build step; works by double-clicking) -->
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
