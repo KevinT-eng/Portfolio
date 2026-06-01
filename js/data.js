@@ -18,7 +18,7 @@ window.SITE_DATA = {
 
   /* ---- 1. BASIC PROFILE / IDENTITY -------------------------------------- */
   profile: {
-    name:        "Dr. Jordan A. Researcher",
+    name:        "Dr. A. Researcher",
     role:        "Researcher in Civil & Structural Engineering",
     tagline:     "Bridges · Structural Engineering · Structural Health Monitoring",
     // Short hero intro (1–2 sentences):
